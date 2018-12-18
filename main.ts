@@ -9,11 +9,10 @@ enum BrightnessEvent {
 namespace gp2 {
     //% blockId=human_detection block="人が動いた"
     export function humanDetection(): boolean {
-        if (pins.digitalReadPin(DigitalPin.P2) == 1) {
+        if (pins.digitalReadPin(DigitalPin.P2) == 1)
             return true;
-        } else {
+        else
             return false;
-        }
     }
     //% blockId=turn_on block="スイッチON"
     export function turnON(): void {
@@ -25,11 +24,10 @@ namespace gp2 {
     }
     //% blockId=is_dark block="暗い"
     export function isDark(): boolean {
-        if (input.lightLevel() < 30) {
+        if (input.lightLevel() < 30)
             return true;
-        } else {
+        else
             return false;
-        }
     }
     function getAnalogValue(p: AnalogPin): number {
         let arr: number[] = [];
@@ -57,13 +55,11 @@ namespace gp2 {
     //% v.min=0 v.max=255
     export function brightnessDetermination(v: number, flag: BrightnessEvent): boolean {
         let res: boolean = true;
-        if (flag == 2) {
+        if (flag == 2)
             res = !res;
-        }
-        if (input.lightLevel() < v) {
+        if (input.lightLevel() < v)
             return res;
-        } else {
+        else
             return !res;
-        }
     }
 }
