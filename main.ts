@@ -33,7 +33,7 @@ namespace gp2 {
     /**
      * micro:bit本体の明るさセンサーが暗い場合（8未満）に真を返します。
      */
-    //% blockId=is_dark block="is dark"
+    //% blockId=is_dark block="暗い"
     //% group="micro:bit本体"
     export function isDark(): boolean {
         return _isDark(_暗い判定閾値, _明るい判定閾値);
