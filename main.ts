@@ -1,8 +1,8 @@
-enum BrightnessEvent {
-    //% block="暗い"
-    IsDark = 1,
-    //% block="明るい"
-    IsBrighter = 2,
+enum DarkOrBrightSpecified {
+    //% block="DARK"
+    IS_DARK,
+    //% block="BRIGHT"
+    IS_BRIGHT,
 }
 
 //% weight=70 icon="\uf0e7" color=#d2691e block="電気の利用"
