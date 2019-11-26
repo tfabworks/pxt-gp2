@@ -34,7 +34,6 @@ namespace gp2 {
      * micro:bit本体の明るさセンサーが暗い場合（8未満）に真を返します。
      */
     //% blockId=is_dark block="暗い"
-    //% group="micro:bit本体"
     export function isDark(): boolean {
         return _isDark(_暗い判定閾値, _明るい判定閾値);
 
@@ -122,7 +121,6 @@ namespace gp2 {
     //% blockId=brightness_determination
     //% block="%lightThreshold|より%settingDarkOrBright|"
     //% lightThreshold.min=0 lightThreshold.max=255
-    //% group="micro:bit本体"
     export function brightnessDetermination(lightThreshold: number, settingDarkOrBright: DarkOrBrightSpecified): boolean {
         if (_HYSTERESIS < 0) { control.assert(false); }
         if (lightThreshold < 0) {
