@@ -1,7 +1,7 @@
 enum DarkOrBrightSpecified {
-    //% block="DARK"
+    //% block="暗い"
     IS_DARK,
-    //% block="BRIGHT"
+    //% block="明るい"
     IS_BRIGHT,
 }
 
@@ -120,7 +120,7 @@ namespace gp2 {
      * @param lightThreshold number of brightness-threshold, eg: 15
      */
     //% blockId=brightness_determination
-    //% block="Than %lightThreshold, %settingDarkOrBright"
+    //% block="%lightThreshold|より%settingDarkOrBright|"
     //% lightThreshold.min=0 lightThreshold.max=255
     //% group="micro:bit本体"
     export function brightnessDetermination(lightThreshold: number, settingDarkOrBright: DarkOrBrightSpecified): boolean {
