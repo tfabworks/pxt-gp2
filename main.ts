@@ -110,7 +110,7 @@ namespace gp2 {
     export function plotBarGraphAnalog() {
         led.plotBarGraph(
             getAnalogValue(AnalogPin.P0),
-            1023
+            512
         )
     }
     
